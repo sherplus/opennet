@@ -379,7 +379,7 @@ class OpenNetBase(object):
 
         # Compute and store the selected thresholds for each calls
         self.class_thresholds(X, y)
-#         print 'n_skipped_batches = ', count_skip
+        # print 'n_skipped_batches = ', count_skip
 
         self.is_training = False
 
@@ -700,7 +700,6 @@ class OpenNetFlat(OpenNetBase):
         if self.enable_recon_loss:
             self.x_recon_test = self.decoder(self.z_test, reuse=True)
         self.is_training = True
-
 
 class OpenNetCNN(OpenNetBase):
     """ OpenNet with convolutional and fully connected layers.
